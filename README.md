@@ -8,6 +8,7 @@ https://itch.io/jam/game-off-2021
 
 ### Priority
 
+### Long-Term
 - [ ] Establish base rules
   - [ ] Unit Types
   - [ ] Building Types
