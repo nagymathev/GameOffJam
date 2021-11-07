@@ -26,6 +26,7 @@ IMPORTANT: what's the user interface to do all these?
 
 ### Decoration:
 - UI
+- Camera controls (zoom? pan? map mode?)
 - Models (+textures): Units, Towers, "trees", base etc
 - Sounds
 - Particles etc
