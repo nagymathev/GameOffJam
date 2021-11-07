@@ -7,9 +7,9 @@ https://itch.io/jam/game-off-2021
 ## TODO
 
 ### Fundamentals:
-- Units, Towers, Base, Health, Teams
-- Navigation
-- Build system/interface (how to cut "tree", plant "tree", build tower; spawn and send "worker" units)
+- Units, Towers, Base, Health, Teams  DONE
+- Navigation  DONE
+- Build system/interface (how to cut "tree", plant "tree", build tower; spawn and send "worker" units) DENES->Bence 
 - Spawn system/interface (how to spawn and send "warrior" units)
 
 ### Gameplay:
