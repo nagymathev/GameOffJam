@@ -9,9 +9,9 @@ https://itch.io/jam/game-off-2021
 ### Priority
 - [ ] Building System (Coding/UI)
   - [ ] Place Placeholder building
-  - [ ] Placeholder Building Selection (Codng - UI)
+  - [ ] Placeholder Building Selection (Coding - UI)
 - [ ] Make Example Test Map (Design)
-- [ ] Establish base rules for Buildings, Units (Codng / Design)
+- [ ] Establish base rules for Buildings, Units (Coding / Design)
 
 ### Long-Term
 - [ ] Establish base rules
