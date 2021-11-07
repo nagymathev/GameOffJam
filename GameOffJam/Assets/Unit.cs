@@ -22,6 +22,9 @@ public class Unit : Damageable
 	void Start ()
 	{
 		agent = GetComponent<NavMeshAgent>();
+		agent.avoidancePriority = Random.Range(1, 99);
+		agent.speed = agent.speed * Random.Range(0.9f, 1.1f);
+		agent.acceleration = agent.acceleration * Random.Range(0.9f, 1.1f);
 
 		//must find the base of the OPPOSITE team
 		//ToDo: potentially find different (move)targets depending on what kind of unit this is
@@ -47,12 +50,35 @@ public class Unit : Damageable
 
 	void Update ()
 	{
-		if (agent && moveTarget)
+		agent.avoidancePriority = Random.Range(1, 99);
+
+		if (moveTarget)
 		{
 			Vector3 targetPos = moveTarget.transform.position;
 			if (!agent.hasPath || agent.isPathStale
 				|| (agent.destination - targetPos).sqrMagnitude > 1.0f)
 			agent.SetDestination(targetPos);
+		}
+
+		//from here it's pretty much copy-paste from tower
+		if (currentTarget != null)
+		{
+			Debug.DrawLine(transform.position, currentTarget.transform.position, Color.white);
+			if ((currentTarget.transform.position - sensor.transform.position).magnitude > attackRange)
+				currentTarget = null;
+		}
+
+		if (reloadTimer > 0)
+		{
+			reloadTimer -= Time.deltaTime;
+		} else
+		{
+			if (currentTarget != null)
+			{
+				//ToDo: particles, sound, etc
+				currentTarget.Hit(1);
+				reloadTimer = 1.0f;
+			}
 		}
 	}
 
@@ -61,13 +87,16 @@ public class Unit : Damageable
 		if (other.isTrigger) return;    //ignore triggers
 		Debug.Log("OTE " + this.name + "-" + other.name, other);
 
-		Unit otherUnit = other.GetComponentInParent<Unit>();
-		Tower otherTower = other.GetComponentInParent<Tower>();
-		Base otherBase = other.GetComponentInParent<Base>();
+		Damageable target = other.GetComponentInParent<Damageable>();
+		if (!target) return;    //ignore if no damageable
+		if (target.team == this.team) return;   //don't attack own team
+		if (!attackUnits && target is Unit) target = null;
+		if (!attackTowers && target is Tower) target = null;
+		if (!attackBase && target is Base) target = null;
 
 		if (currentTarget == null)
 		{
-			currentTarget = otherUnit;
+			currentTarget = target;
 		}
 
 	}

@@ -2546,6 +2546,8 @@ GameObject:
   - component: {fileID: 1805363881}
   - component: {fileID: 1805363880}
   - component: {fileID: 1805363882}
+  - component: {fileID: 1805363883}
+  - component: {fileID: 1805363884}
   m_Layer: 0
   m_Name: Rules
   m_TagString: Untagged
@@ -2565,11 +2567,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 101.599945, y: 177.8725}
+  scrollPos: {x: 30.294386, y: 107.49379}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.6100003
+  zoom: 0.7000002
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -2577,9 +2579,8 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1805363877}
-  selectedCommands:
-  - {fileID: 1805363876}
+  - {fileID: 1805363883}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -2642,7 +2643,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 193.48187
     y: 118.84867
-    width: 105.73767
+    width: 107.14284
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2731,7 +2732,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 492.17023
     y: 122.12736
-    width: 105.73767
+    width: 107.14284
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2756,6 +2757,45 @@ MonoBehaviour:
   parentBlock: {fileID: 1805363881}
   suppressBlockAutoSelect: 0
   targetButton: {fileID: 265947273}
+--- !u!114 &1805363883
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1805363874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 329.54736
+    y: 358.1928
+    width: 135.71426
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 5
+  blockName: BaseDestroyed
+  description: 
+  eventHandler: {fileID: 1805363884}
+  commandList: []
+  suppressAllAutoSelections: 0
+--- !u!114 &1805363884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1805363874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1805363883}
+  suppressBlockAutoSelect: 0
+  message: BaseDestroyed
 --- !u!1 &1908857828
 GameObject:
   m_ObjectHideFlags: 0

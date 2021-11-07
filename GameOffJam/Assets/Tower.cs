@@ -51,10 +51,13 @@ public class Tower : Damageable
 
 		Debug.Log("OTE " + this.name + "-" + other.name, other);
 
-		Unit otherUnit = other.GetComponentInParent<Unit>();
+		Damageable target = other.GetComponentInParent<Damageable>();
+		if (!target) return;    //ignore if no damageable
+		if (target.team == this.team) return;	//don't attack own team
+
 		if (currentTarget == null)
 		{
-			currentTarget = otherUnit;
+			currentTarget = target;
 		}
 	}
 

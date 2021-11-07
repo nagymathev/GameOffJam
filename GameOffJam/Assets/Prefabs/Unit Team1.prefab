@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  health: 100
+  health: 50
   attackUnits: 1
   attackTowers: 1
   attackBase: 1
