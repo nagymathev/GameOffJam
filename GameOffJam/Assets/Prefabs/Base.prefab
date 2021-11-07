@@ -58,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1c9b4cc4b61ef8d45b31dac67d7b3933, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,6 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49930fb6e526a04fb0fc0ef66cb33f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: 0
+  health: 100
 --- !u!208 &208023990422190446
 NavMeshObstacle:
   m_ObjectHideFlags: 1
