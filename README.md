@@ -12,7 +12,7 @@ https://itch.io/jam/game-off-2021
   - [ ] Placeholder Building Selection (Coding - UI)
 - [ ] Make Example Test Map (Design)
 - [ ] Establish base rules for Buildings, Units (Coding / Design)
-
+- [x] Example Tick
 ### Long-Term
 - [ ] Establish base rules
   - [ ] Unit Types
