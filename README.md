@@ -9,8 +9,9 @@ https://itch.io/jam/game-off-2021
 ### Fundamentals:
 - Units, Towers, Base, Health, Teams  DONE
 - Navigation  DONE
+- Spawn system/interface (warrior units DONE -> different warriors?) 
 - Build system/interface (how to cut "tree", plant "tree", build tower; spawn and send "worker" units) DENES->Bence 
-- Spawn system/interface (how to spawn and send "warrior" units)
+IMPORTANT: what's the user interface to do all these?
 
 ### Gameplay:
 - Win/Lose condition, (re)start level
