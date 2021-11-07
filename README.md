@@ -8,7 +8,7 @@ https://itch.io/jam/game-off-2021
 
 ### Priority
 
-- [] Establish base rules
-  - [] Unit Types
-  - [] Building Types
-  - [] Player Actions
+- [ ] Establish base rules
+  - [ ] Unit Types
+  - [ ] Building Types
+  - [ ] Player Actions
