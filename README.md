@@ -11,6 +11,7 @@ https://itch.io/jam/game-off-2021
 - Navigation  DONE
 - Spawn system/interface (warrior units DONE -> different warriors?) 
 - Build system/interface (how to cut "tree", plant "tree", build tower; spawn and send "worker" units) DENES->Bence 
+
 IMPORTANT: what's the user interface to do all these?
 
 ### Gameplay:
