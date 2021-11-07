@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Unit : Damageable
 {
+	public bool builder = false;
 	public bool attackUnits = true;
 	public bool attackTowers = true;
 	public bool attackBase = true;
