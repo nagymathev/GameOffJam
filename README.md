@@ -7,10 +7,11 @@ https://itch.io/jam/game-off-2021
 ## TODO
 
 ### Priority
-- [ ] Building System
+- [ ] Building System (Coding/UI)
   - [ ] Place Placeholder building
-  - [ ] Building Selection
-- [ ] Make Example Test Map
+  - [ ] Placeholder Building Selection (Codng - UI)
+- [ ] Make Example Test Map (Design)
+- [ ] Establish base rules for Buildings, Units (Codng / Design)
 
 ### Long-Term
 - [ ] Establish base rules
