@@ -86,7 +86,7 @@ public class Unit : Damageable
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.isTrigger) return;    //ignore triggers
-		Debug.Log("OTE " + this.name + "-" + other.name, other);
+		//Debug.Log("OTE " + this.name + "-" + other.name, other);
 
 		Damageable target = other.GetComponentInParent<Damageable>();
 		if (!target) return;    //ignore if no damageable

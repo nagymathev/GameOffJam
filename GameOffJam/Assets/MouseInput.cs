@@ -19,6 +19,8 @@ public class MouseInput : MonoBehaviour
 	public GameObject clickedObject;
 	public Damageable clickedDamageable;
 
+    public BODScript bodScript;
+
 
 	void Start()
 	{
@@ -26,6 +28,8 @@ public class MouseInput : MonoBehaviour
 
 		if (!flowChart)
 			flowChart = this.GetComponent<Fungus.Flowchart>();
+
+        bodScript = GetComponent<BODScript>();
 	}
 
 	void Update()
@@ -44,7 +48,7 @@ public class MouseInput : MonoBehaviour
 				// these are pixel coordinates in window space (bottom left->right&up)
 				if (mousePressTime > 0 && (Input.mousePosition - mousePosPress).sqrMagnitude > 1.0f)
 				{
-					Cursor.lockState = CursorLockMode.Locked;
+					//Cursor.lockState = CursorLockMode.Locked;
 				} else
 				{//holding without moving; detect a click and pass it to onfoot movement
 					if (mousePressTime >= 0.2f)
@@ -80,6 +84,15 @@ public class MouseInput : MonoBehaviour
 		if (Physics.Raycast(p1, dir, out hit, clickRange, clickMask))
 		{
 			clickedPosWorld = hit.point;
+
+            //print("Hit: " + hit.collider.name);
+
+            //Call build or Destroy Script (bodScirpt)
+            bodScript.WhatGotHit(hit.collider.gameObject);
+            /*if (hit.collider.tag == "Ground" || hit.collider.tag == "Wall")
+            {
+                bodScript.WhatGotHit(hit.collider.gameObject);
+            }*/
 
 			Damageable target = hit.collider.GetComponentInParent<Damageable>();
 			if (target)

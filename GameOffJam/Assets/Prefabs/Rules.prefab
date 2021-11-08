@@ -30,7 +30,6 @@ GameObject:
   - component: {fileID: 114244678416546512}
   - component: {fileID: 114478534421609920}
   - component: {fileID: 114640528336080004}
-  - component: {fileID: 114782574361197924}
   - component: {fileID: 114414644295653874}
   - component: {fileID: 114092619186904448}
   - component: {fileID: 114821213365889024}
@@ -43,10 +42,10 @@ GameObject:
   - component: {fileID: 114859247025058818}
   - component: {fileID: 114131639320697700}
   - component: {fileID: 114591459762859210}
-  - component: {fileID: 114384422726056598}
   - component: {fileID: 114490268462106740}
   - component: {fileID: 114676338753690124}
   - component: {fileID: 114057698097405464}
+  - component: {fileID: 114279326794765764}
   m_Layer: 0
   m_Name: Rules
   m_TagString: Untagged
@@ -92,7 +91,7 @@ MonoBehaviour:
     booleanVal: 0
   _spawnPosition:
     vector3Ref: {fileID: 0}
-    vector3Val: {x: -25, y: 1, z: -25}
+    vector3Val: {x: -150, y: 1, z: 10}
   _spawnRotation:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
@@ -175,10 +174,10 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 12
+  itemId: 19
   blockName: ClickedGround
   description: 
-  eventHandler: {fileID: 114384422726056598}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 114591459762859210}
   - {fileID: 114490268462106740}
@@ -208,7 +207,7 @@ MonoBehaviour:
   eventHandler: {fileID: 114478534421609920}
   commandList: []
   suppressAllAutoSelections: 0
---- !u!114 &114384422726056598
+--- !u!114 &114279326794765764
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -216,12 +215,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1678485125180666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d07b2355e0ee724b9fa369aab382a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 114131639320697700}
-  suppressBlockAutoSelect: 0
-  message: ClickedPos
+  wall: {fileID: 1803838368259726, guid: 85d5b82238c62cb4c925025b5f40d52e, type: 2}
+  tower: {fileID: 1145538418431386, guid: e2330e4fe8060784785576f568194bdf, type: 2}
+  tree: {fileID: 1392130365405284, guid: 91cfc16e4480d0c4f98b00101aab8943, type: 2}
+  toBuild: {fileID: 0}
+  currentBODMode: 
 --- !u!114 &114390854819924740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,7 +418,7 @@ MonoBehaviour:
   itemId: 6
   blockName: Intro
   description: 
-  eventHandler: {fileID: 114782574361197924}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 114414644295653874}
   - {fileID: 114821213365889024}
@@ -492,7 +493,7 @@ MonoBehaviour:
     booleanVal: 0
   _spawnPosition:
     vector3Ref: {fileID: 0}
-    vector3Val: {x: 25, y: 1, z: 25}
+    vector3Val: {x: 0, y: 1, z: 140}
   _spawnRotation:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
@@ -526,7 +527,8 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 114640528336080004}
   selectedCommands: []
   variables:
   - {fileID: 114390854819924740}
@@ -615,20 +617,7 @@ MonoBehaviour:
   clickedPosWorld: {x: 0, y: 0, z: 0}
   clickedObject: {fileID: 0}
   clickedDamageable: {fileID: 0}
---- !u!114 &114782574361197924
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1678485125180666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 114640528336080004}
-  suppressBlockAutoSelect: 0
-  waitForFrames: 1
+  bodScript: {fileID: 114279326794765764}
 --- !u!114 &114821213365889024
 MonoBehaviour:
   m_ObjectHideFlags: 1
