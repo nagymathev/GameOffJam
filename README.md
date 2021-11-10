@@ -46,3 +46,9 @@ IMPORTANT: what's the user interface to do all these?
   - [ ] Unit Types
   - [ ] Building Types
   - [ ] Player Actions
+
+
+### Bugs we need to fix (or not it's a bug-y game)
+- [ ] units spawn and teleport somewhere else
+- [ ] can place multiple OBJ on a single tile
+- [ ] units start moving towards the base even when there is no path to it (could make a BASE path we can't modify)
