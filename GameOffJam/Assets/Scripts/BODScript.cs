@@ -85,4 +85,9 @@ public class BODScript : MonoBehaviour {
     {
         Destroy(toDestroy);
     }
+
+    public void SetCurrentBODMode(string newBodMode) 
+    {
+        currentBODMode = newBodMode;
+    }
 }

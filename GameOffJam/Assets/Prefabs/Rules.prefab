@@ -60,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1678485125180666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.793785, y: 26.597271, z: -78.57813}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
     booleanVal: 0
   _spawnPosition:
     vector3Ref: {fileID: 0}
-    vector3Val: {x: -150, y: 1, z: 10}
+    vector3Val: {x: -75, y: 1, z: 5}
   _spawnRotation:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
@@ -223,6 +223,7 @@ MonoBehaviour:
   tree: {fileID: 1392130365405284, guid: 91cfc16e4480d0c4f98b00101aab8943, type: 2}
   toBuild: {fileID: 0}
   currentBODMode: 
+  tileInfoScript: {fileID: 0}
 --- !u!114 &114390854819924740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -493,7 +494,7 @@ MonoBehaviour:
     booleanVal: 0
   _spawnPosition:
     vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 1, z: 140}
+    vector3Val: {x: 0, y: 1, z: 70}
   _spawnRotation:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
@@ -528,7 +529,7 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 114640528336080004}
+  - {fileID: 114698387494680982}
   selectedCommands: []
   variables:
   - {fileID: 114390854819924740}

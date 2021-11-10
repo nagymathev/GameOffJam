@@ -21,9 +21,15 @@ public class tileInfo : MonoBehaviour {
             //onMe = hit.collider.GetComponentInParent<ToDestroy>().gameObject;
         }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-	}
+
+    // Update is called once per frame
+    void Update() {
+        Debug.DrawRay(transform.position, transform.up, Color.red);
+
+        RaycastHit hitUpdate;
+        if (Physics.Raycast(transform.position, transform.up, out hitUpdate, 2f, mouseInputScript.clickMask))
+        {
+            print("Hit raycast: " + hitUpdate.collider);
+        } 
+    }
 }
